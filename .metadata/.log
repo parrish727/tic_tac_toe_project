@@ -1,0 +1,46 @@
+!SESSION 2024-08-11 16:13:33.419 -----------------------------------------------
+eclipse.buildId=4.28.0.20230608-1200
+java.version=20.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/pktech_dev/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/pktech_dev/.eclipse_keyring
+
+!ENTRY org.eclipse.emf.ecore 2 0 2024-08-11 16:13:34.159
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+
+!ENTRY org.eclipse.jface 2 0 2024-08-11 16:54:35.946
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-08-11 16:54:35.946
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.jsch.core 4 0 2024-08-11 17:00:25.596
+!MESSAGE An error occurred loading the SSH2 private keys
+!STACK 0
+com.jcraft.jsch.JSchException: invalid privatekey: [B@1699ca2
+	at com.jcraft.jsch.KeyPair.load(KeyPair.java:664)
+	at com.jcraft.jsch.KeyPair.load(KeyPair.java:561)
+	at com.jcraft.jsch.IdentityFile.newInstance(IdentityFile.java:40)
+	at com.jcraft.jsch.JSch.addIdentity(JSch.java:406)
+	at com.jcraft.jsch.JSch.addIdentity(JSch.java:366)
+	at org.eclipse.jsch.internal.core.Utils.loadPrivateKeys(Utils.java:108)
+	at org.eclipse.jsch.internal.core.JSchCorePlugin.loadPrivateKeys(JSchCorePlugin.java:226)
+	at org.eclipse.jsch.internal.core.JSchProvider.createSession(JSchProvider.java:46)
+	at org.eclipse.tm.terminal.connector.ssh.connector.SshConnection.createSession(SshConnection.java:81)
+	at org.eclipse.tm.terminal.connector.ssh.connector.SshConnection.run(SshConnection.java:114)
